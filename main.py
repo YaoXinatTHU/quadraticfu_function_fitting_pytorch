@@ -45,7 +45,6 @@ if __name__ == '__main__':
             plt.plot(input.numpy(), out.data.numpy(),'r-')
             plt.text(0.5, 0, 'Round %d,Loss=%.4f' % (i,l.data[0]), fontdict={'size': 20, 'color':  'red'})
             plt.pause(0.5)
-    res = n(Variable(input,requires_grad = False))
     plt.cla()
     input2 = torch.unsqueeze(torch.linspace(-2, 2, 100), dim=1)
     out_real = torch.pow(input2,2) + 1
